@@ -7,20 +7,23 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs-build -s ./stories/assets",
-    "chromatic": "npx chromatic --project-token 5995fe50e85a"
+    "deploy-storybook": "storybook-to-aws-s3 --bucket-path=storybook --aws-profile=NONE"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.13.10",
+    "@babel/plugin-transform-arrow-functions": "^7.13.0",
     "@storybook/addon-actions": "^6.1.21",
     "@storybook/addon-essentials": "^6.1.21",
     "@storybook/addon-links": "^6.1.21",
+    "@storybook/storybook-deployer": "^2.8.7",
     "@storybook/vue": "^6.1.21",
     "babel-loader": "^8.2.2",
     "babel-preset-vue": "^2.0.2",
     "chromatic": "^5.7.0",
+    "storybook-addon-designs": "^5.4.5",
     "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.12"
   },

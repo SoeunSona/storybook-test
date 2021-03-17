@@ -1,4 +1,5 @@
 import MyButton from './Button.vue';
+import { withDesign } from 'storybook-addon-designs'
 
 export default {
   title: 'Example/Button',
@@ -7,6 +8,7 @@ export default {
     backgroundColor: { control: 'color' },
     size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
   },
+  decorators: [withDesign],
 };
 
 const Template = (args, { argTypes }) => ({
@@ -37,3 +39,11 @@ Small.args = {
   size: 'small',
   label: 'Button',
 };
+
+
+Primary.parameters = {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
+  },
+}
