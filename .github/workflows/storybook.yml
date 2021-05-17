@@ -12,7 +12,6 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm install
-          npm run build-storybook
       - name: Transfer to S3 for serving static
         uses: jakejarvis/s3-sync-action@master
         with:
@@ -22,4 +21,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.TEST_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.TEST_AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'us-west-2'
-          SOURCE_DIR: 'website/build/docs-build'
+          SOURCE_DIR: 'docs-build'
